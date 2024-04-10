@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulari del temps</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="temps.js"></script>
+</head>
+<body>
+    <form id="formulari">
+        <label for="ciutat">Ciutat</label>
+        <input type="text" id="ciutat" name="ciutat" required /><br />
+
+        <label for="cpostal">Codi Postal</label>
+        <input type="number" id="cpostal" name="cpostal" required /><br />
+
+        <label for="pais">Pais</label>
+        <input type="text" id="pais" name="pais" required /><br/>
+
+        <button type="submit">Cercar</button>
+    </form>
+
+    <div id="weatherResults" class="hidden">
+        <h2>Localització</h2>
+        <p id="location"></p>
+        <div>
+            <h3>Informació meteorològica</h3>
+            <p id="temperature"></p>
+            <p id="weatherDescription"></p>
+            <img id="weatherIcon" alt="Icona Meteorològica" />
+        </div>
+        <div>
+            <h3>Previsió per demà</h3>
+            <p id="forecastTemperature"></p>
+            <p id="forecastWeatherDescription"></p>
+            <img id="forecastW" />
+</body>
+</html>
