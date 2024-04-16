@@ -23,6 +23,13 @@ document.getElementById('formulari').addEventListener('submit', async function (
                 weatherDescription: currentData.current.condition.text,
             },
             forecast:{
+                city: forecastData.location.name,
+                country: forecastData.location.country,
+                region: forecastData.location.region,
+                forecastday: forecastData.forecast.forecastday,
+                weatherIcon: forecastData.forecast.forecastday[0].day.condition.icon,
+                temperature: forecastData.forecast.forecastday[0].day.avgtemp_c,
+                weatherDescription: forecastData.forecast.forecastday[0].day.condition.text,
 
             }
         }
@@ -54,6 +61,8 @@ async function getWeather() {
     document.getElementById('temps').innerHTML = temps;
     document.getElementById('condicio').innerHTML = condicio;
     document.getElementById('icon').src = icon;
+    const div = document.getElementById('weatherResults');
+    const 
 
 }
 
